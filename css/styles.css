@@ -612,18 +612,33 @@ img {
 }
 
 .modal-check-text {
-    font-family: "Roboto", sans-serif;
-        font-weight: 400;
         font-size: 12px;
-        line-height: 1.16667;
+        line-height: 1.17;
         letter-spacing: 0.04em;
         color: #8e8f99;
-        a {
-            line-height: 1.33333;
+        display: flex;
+        align-items: center;
+a {
                 text-decoration: underline;
                 text-decoration-skip-ink: none;
                 color: #4d5ae5;
-        }
+}
 }
 
-.modal-check:checked
+.span {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+        border: 1px solid rgba(46, 47, 66, 0.4);
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        fill: transparent;
+}
+
+.modal-check:checked + .modal-check-text span {
+    background-color: #404bbf;;
+    border: none;
+    fill: #fafafa
+}
